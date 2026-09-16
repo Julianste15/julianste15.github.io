@@ -1,39 +1,247 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <title>Sistema de Agendamiento - Clinica Piedra Azul</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julián Camacho — Desarrollador Full Stack</title>
+  <meta name="description" content="Portafolio de Julián Camacho, estudiante de Ingeniería de Sistemas y desarrollador full stack en Popayán, Colombia. Proyectos web, de escritorio y sistemas distribuidos, en español e inglés.">
+  <meta name="author" content="Julián Camacho">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://julianste15.github.io/">
+  <meta property="og:title" content="Julián Camacho — Desarrollador Full Stack">
+  <meta property="og:description" content="Software full stack que resuelve problemas reales: apps web, de escritorio y sistemas distribuidos. Popayán, Colombia.">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="Julián Camacho">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Julián Camacho",
+    "jobTitle": "Full Stack Developer",
+    "alumniOf": "Universidad del Cauca",
+    "address": "Popayán, Cauca, Colombia",
+    "url": "https://julianste15.github.io",
+    "sameAs": [
+      "https://www.linkedin.com/in/julian-camacho-inge",
+      "https://github.com/Julianste15"
+    ]
+  }
+  </script>
 </head>
-<body style="background-color: #d1f3f1;">
-    <header style="text-align: center;background-color: #31bfeb;border-radius: 5px;padding: 20px;margin-bottom: 15px;">
-        <h1 style="color: blue;padding-top: 30px;">Sistema de Agendamiento - Clinica Piedra Azul</h1>
-        <img src="logo.png" style="width: 200px; height: 200px;" alt="logo" />
-        <!-- Se usará la etiqueta font-family,font size -->
-        <p style="padding: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;padding-bottom: 30px;">
-            <i>Atención en salud con enfoque en medicina alternativa en Popayán</i>
-        </p>
-    </header>
-    <main style="background-color: white;border-radius: 5px;padding: 20px;margin-bottom: 15px;">
-        <h2 style="text-align: center;color: blue;">Nueva Versión del sistema para el agendamiento de pacientes</h2>
-        <!-- Se usará las etiquetas strong,b,i,ins,mark,br,del -->
-        <p style="color:black;">
-            El nuevo sistema de la clinica permite la <strong>gestión autonoma de citas</strong>, eliminando la dependencia del registro manual. 
-            Es <strong>muy importante </strong>
-            que los pacientes verifiquen su disponibilidad antes de confirmar.<br />
-            <i>Anteriormente</i>, el proceso era <b><del>monolitico y manual</del></b>. Con la <ins>nueva plataforma web</ins> el usuario puede elegir el profesional, en areas como <mark>Terapia Neural</mark> 
-            o Fisioterapia y los medicos
-            pueden controlar los espacios libres para agendar nuevas citas.<br />
-        </p>
-        <!-- Se usará la etiqueta b,small -->
-        <p>Para registrarse el sistema solicitará su nombre completo y <b>número de documento</b>.<small>Los datos estan protegidos por politicas de confidencialidad médica.</small></p>
-        <nav style="text-align: center;"><a href="html.png" style="color: red;"><ins>Acceder al Portal de Pacientes</ins></a></nav>
-        <!-- Se usará la etiqueta sub -->
-        <p style="text-align: right;">Versión del Software:2.0<sub>web</sub></p>
-    </main>
-    <footer style="background-color: rgb(101, 161, 196);border-radius: 5px;padding: 20px;">
-        <!-- Se usará la etiqueta br,em -->
-        <p><em>Ubicación: Kilómetro 5 vial al Huila, Popayán.<br />
-        Horario:Lunes a Viernes en horas de la Mañana</em><br /></p>
-    </footer>
+<body>
+  <a class="skip" data-i18n="skipProyectos" href="#proyectos">Saltar a proyectos</a>
+
+  <header class="topbar">
+    <a class="site-name" href="#inicio">Julián Camacho<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#proyectos" data-i18n="navProyectos">Proyectos</a>
+      <a href="#habilidades" data-i18n="navHabilidades">Habilidades</a>
+      <a href="#formacion" data-i18n="navFormacion">Formación</a>
+      <a href="#contacto" data-i18n="navContacto">Contacto</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma">
+      <button class="lang-btn" data-lang="es" aria-pressed="true" aria-label="Español">ES</button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <p class="hero-kicker" data-i18n="heroKicker">Estudiante de Ingeniería de Sistemas en la Universidad del Cauca</p>
+      <h1 class="hero-name">Julián Camacho</h1>
+      <p class="hero-claim" data-i18n="heroClaim">Construyo software full stack para resolver problemas reales: apps web, de escritorio y sistemas distribuidos.</p>
+      <p class="hero-sub" data-i18n="heroSub">He trabajado con clientes reales y en proyectos académicos exigentes, de la base de datos hasta la interfaz. Soy de Popayán, Colombia, y estoy listo para aportar a tu equipo.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#proyectos" data-i18n="heroCta1">Ver proyectos</a>
+        <a class="btn btn-ghost" href="#contacto" data-i18n="heroCta2">Escríbeme</a>
+      </div>
+      <p class="availability"><span class="pulse" aria-hidden="true"></span><span data-i18n="availability">Disponible para trabajar · Prácticas · Freelance</span></p>
+    </section>
+
+    <section class="facts" aria-label="Datos en breve">
+      <div class="fact">
+        <span class="fact-num">2</span>
+        <span class="fact-txt" data-i18n="fact1">proyectos construidos para clientes reales</span>
+      </div>
+      <div class="fact">
+        <span class="fact-num">6+</span>
+        <span class="fact-txt" data-i18n="fact2">lenguajes y frameworks dominados</span>
+      </div>
+      <div class="fact">
+        <span class="fact-num">ES/EN</span>
+        <span class="fact-txt" data-i18n="fact3">portafolio en español e inglés</span>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <h2 class="section-title" data-i18n="proyectosTitle">Proyectos</h2>
+      <p class="section-note" data-i18n="proyectosNote">Una selección de lo que he construido, explicado en lenguaje sencillo.</p>
+
+      <article class="project">
+        <div class="project-index">01</div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>ProcessManagement</h3>
+            <a href="https://github.com/Julianste15/ProcessManagement" data-i18n="linkRepo">Ver repositorio</a>
+          </div>
+          <p class="project-desc" data-i18n="p1desc">Plataforma que digitaliza el proceso completo de trabajos de grado de la Universidad del Cauca. Funciona con varios servicios que se conectan entre sí, tiene su propia aplicación de escritorio y se puede poner en marcha con un solo comando.</p>
+          <p class="project-tags">Java · Spring Boot · PostgreSQL · RabbitMQ · Docker</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-index">02</div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>OrpheusFlow</h3>
+            <a href="https://github.com/Julianste15/OrpheusFlow" data-i18n="linkRepo">Ver repositorio</a>
+          </div>
+          <p class="project-desc" data-i18n="p2desc">Sistema de streaming de música distribuido que combina dos lenguajes de programación, Go y Java, para que varios usuarios puedan reproducir audio en tiempo real mientras el sistema les notifica por correo.</p>
+          <p class="project-tags">Go · Java · gRPC · RMI · RabbitMQ</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-index">03</div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>conciliabank</h3>
+            <a href="https://github.com/Julianste15/conciliabank" data-i18n="linkRepo">Ver repositorio</a>
+          </div>
+          <p class="project-desc" data-i18n="p3desc">App de escritorio para el cliente Activa IPS que le ahorra horas de trabajo al área contable: cruza automáticamente las facturas contra el extracto del banco y deja para revisión humana solo lo que no coincide.</p>
+          <p class="project-tags">Python · PySide6 · SQLite</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-index">04</div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>VC-Style</h3>
+            <a href="https://github.com/Julianste15/VC-Style" data-i18n="linkRepo">Ver repositorio</a>
+          </div>
+          <p class="project-desc" data-i18n="p4desc">Tienda en línea y sistema de reservas para una joyería de Popayán: catálogo con reseñas, apartados con depósito del 30 %, pagos por Wompi y un panel para que el dueño administre todo.</p>
+          <p class="project-tags">React · Node.js · Express · Wompi</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-index">05</div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>Tablero de Lotería 1-90</h3>
+            <a href="https://julianste15.github.io/loteria/" data-i18n="linkDemo">Ver demo</a>
+          </div>
+          <p class="project-desc" data-i18n="p5desc">Tablero web para marcar las bolas que van saliendo en un juego de lotería o bingo del 1 al 90. Guarda el progreso automáticamente y funciona directo desde el navegador, sin instalar nada.</p>
+          <p class="project-tags">JavaScript · HTML · CSS</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-index">06</div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>Clínica Piedrazul</h3>
+            <a href="https://github.com/Julianste15/piedrazul-angular" data-i18n="linkRepo">Ver repositorio</a>
+          </div>
+          <p class="project-desc" data-i18n="p6desc">Página moderna para una clínica de medicina alternativa, migrada a Angular. El paciente conoce los servicios, ve al equipo médico y llena un formulario responsable de registro con validación en tiempo real.</p>
+          <p class="project-tags">Angular · TypeScript · Bootstrap</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="habilidades">
+      <h2 class="section-title" data-i18n="habilidadesTitle">Habilidades</h2>
+      <p class="section-note" data-i18n="habilidadesNote">Lo que utilizo a diario para construir, probar y desplegar software.</p>
+
+      <div class="skills">
+        <div class="skill">
+          <h3 class="skill-title" data-i18n="skillBackend">Backend</h3>
+          <ul>
+            <li>Java · Spring Boot</li>
+            <li>Python · Flask</li>
+            <li>Go</li>
+            <li>Node.js · Express</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3 class="skill-title" data-i18n="skillFrontend">Frontend</h3>
+          <ul>
+            <li>Angular · TypeScript</li>
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>HTML · CSS</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3 class="skill-title" data-i18n="skillData">Bases de datos</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>SQLite</li>
+            <li>JPA · Hibernate</li>
+            <li>SQLAlchemy</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3 class="skill-title" data-i18n="skillDevops">Distribuidos y despliegue</h3>
+          <ul>
+            <li>Microservicios · gRPC</li>
+            <li>RabbitMQ · WebSockets</li>
+            <li>Docker</li>
+            <li>Git · GitHub Pages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="formacion">
+      <h2 class="section-title" data-i18n="formacionTitle">Formación y certificaciones</h2>
+      <p class="section-note" data-i18n="formacionNote">Mi camino de formación, en orden cronológico.</p>
+
+      <ol class="timeline">
+        <li>
+          <h3 data-i18n="edu1t">Ingeniería de Sistemas</h3>
+          <p data-i18n="edu1d">Universidad del Cauca, Popayán · 2021 a 2027. Formación con enfoque en ingeniería de software, sistemas distribuidos y diseño de software.</p>
+        </li>
+        <li>
+          <h3>Full Stack Empresarial con Spring Boot y Angular</h3>
+          <p data-i18n="edu2d">Dev Senior · 2025. Formación integral en desarrollo backend con Spring Boot y frontend con Angular.</p>
+        </li>
+        <li>
+          <h3>Programa Oracle Next Education (ONE) — Back-end</h3>
+          <p data-i18n="edu3d">Alura Latam · Oracle. Programa de formación en desarrollo backend con Java, Spring Boot y bases de datos.</p>
+        </li>
+        <li>
+          <h3>Cursos complementarios</h3>
+          <p data-i18n="edu4d">Alura Latam · Spring Boot 3 (API Rest y buenas prácticas), Persistencia con JPA: Hibernate, Git y GitHub, Principiante en Programación (ONE), Desarrollo Personal (ONE).</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <h2 class="section-title" data-i18n="contactoTitle">Hablemos</h2>
+      <p class="section-note" data-i18n="contactoNote">¿Tienes una vacante, una práctica profesional, el SENA o un proyecto? Cuéntame y respondo rápido.</p>
+      <div class="contact-links">
+        <a class="btn" href="mailto:jscamacho@unicauca.edu.co">jscamacho@unicauca.edu.co</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/julian-camacho-inge">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Julianste15">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Julián Camacho · Popayán, Colombia 🇨🇴</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

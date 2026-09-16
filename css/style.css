@@ -1,0 +1,444 @@
+/* ==========================================================
+   Julián Camacho — Portafolio
+   Ciudad Blanca: paredes blancas, hierro negro, acento dorado.
+   ========================================================== */
+
+:root {
+  --wall: #FAF8F5;
+  --ink: #26241F;
+  --stone: #6E685E;
+  --iron: #DCD6CB;
+  --iron-strong: #C9C2B4;
+  --gold: #A9852B;
+  --gold-deep: #8A6D1F;
+  --green: #3E6B4F;
+  --paper: #FFFFFF;
+
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+  --space: clamp(1rem, 4vw, 1.75rem);
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--wall);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--gold);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 6px 0;
+  z-index: 100;
+  font-weight: 600;
+}
+.skip:focus { left: 0; }
+
+/* ---------- Barra superior ---------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem clamp(1.25rem, 5vw, 3.5rem);
+  background: rgba(250, 248, 245, 0.86);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--iron);
+}
+
+.site-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.site-name .dot { color: var(--gold); }
+
+.nav {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.25rem);
+}
+.nav a {
+  text-decoration: none;
+  font-size: 0.98rem;
+  color: var(--stone);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.nav a:hover { color: var(--ink); border-color: var(--gold); }
+
+.lang {
+  display: inline-flex;
+  border: 1px solid var(--iron-strong);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lang-btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  padding: 0.4rem 0.85rem;
+  border: 0;
+  background: transparent;
+  color: var(--stone);
+  cursor: pointer;
+}
+.lang-btn[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--wall);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(5rem, 12vh, 9rem) var(--space) clamp(3.5rem, 7vh, 5rem);
+}
+
+.hero-kicker {
+  margin: 0 0 1.1rem;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--gold-deep);
+}
+
+.hero-name {
+  margin: 0 0 1.4rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.2rem, 11vw, 6.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+}
+
+.hero-claim {
+  max-width: 46ch;
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.hero-sub {
+  max-width: 60ch;
+  margin: 0 0 2.2rem;
+  color: var(--stone);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  background: var(--ink);
+  color: var(--wall);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.btn:hover { background: var(--gold-deep); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+.btn-ghost:hover { background: var(--ink); color: var(--wall); }
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--iron-strong);
+  border-radius: 999px;
+  color: var(--green);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(62, 107, 79, 0.45); }
+  50% { box-shadow: 0 0 0 7px rgba(62, 107, 79, 0); }
+}
+
+/* ---------- Datos en breve ---------- */
+
+.facts {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--space) 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--iron);
+}
+.fact {
+  padding: 1.6rem 1.25rem 1.6rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+.fact + .fact { border-left: 1px solid var(--iron); padding-left: 1.6rem; }
+.fact-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--gold-deep);
+  line-height: 1;
+}
+.fact-txt { color: var(--stone); font-size: 0.98rem; }
+
+/* ---------- Secciones ---------- */
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vh, 5.5rem) var(--space);
+}
+
+.section-title {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+  letter-spacing: -0.02em;
+}
+
+.section-note {
+  margin: 0 0 clamp(2.2rem, 5vh, 3.2rem);
+  color: var(--stone);
+  font-size: 1.05rem;
+}
+
+/* ---------- Proyectos ---------- */
+
+.project {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1.6rem, 4vw, 2.2rem) 0;
+  border-top: 1px solid var(--iron);
+}
+.project:last-of-type { border-bottom: 1px solid var(--iron); }
+
+.project-index {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--gold-deep);
+  padding-top: 0.4rem;
+}
+
+.project-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+.project-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+}
+.project-head a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.project-head a:hover { border-color: var(--gold-deep); }
+
+.project-desc {
+  margin: 0.55rem 0 0.7rem;
+  max-width: 66ch;
+  color: var(--ink);
+}
+
+.project-tags {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--stone);
+}
+
+/* ---------- Habilidades ---------- */
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+.skill {
+  border: 1px solid var(--iron);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  background: var(--paper);
+}
+.skill-title {
+  margin: 0 0 0.7rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.skill ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--stone);
+  font-size: 0.98rem;
+}
+.skill li { padding: 0.18rem 0; }
+
+/* ---------- Formación ---------- */
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: paso;
+}
+.timeline li {
+  position: relative;
+  padding: 0 0 2.2rem 3rem;
+  border-left: 1px solid var(--iron-strong);
+  margin-left: 0.6rem;
+}
+.timeline li:last-child { padding-bottom: 0.4rem; }
+.timeline li::before {
+  counter-increment: paso;
+  content: counter(paso);
+  position: absolute;
+  left: -1.15rem;
+  top: 0.1rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--gold-deep);
+  background: var(--wall);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+}
+.timeline h3 { margin: 0 0 0.3rem; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
+.timeline p { margin: 0; color: var(--stone); max-width: 64ch; }
+.cert-tag {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+  background: #F3ECDC;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* ---------- Contacto ---------- */
+
+.contact {
+  border-top: 2px solid var(--ink);
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ---------- Pie ---------- */
+
+.footer {
+  max-width: 1120px;
+  margin: 1px auto 0;
+  padding: 1.5rem var(--space) 2.5rem;
+  border-top: 1px solid var(--iron);
+  color: var(--stone);
+  font-size: 0.95rem;
+}
+
+/* ---------- Movimiento (solo un momento: el hero) ---------- */
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.hero { animation: rise 0.7s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero { animation: none; }
+  .pulse { animation: none; }
+}
+
+/* ---------- Accesibilidad ---------- */
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 760px) {
+  body { font-size: 17px; }
+  .nav { display: none; }
+  .hero-claim { font-size: 1.3rem; }
+  .facts { grid-template-columns: 1fr; }
+  .fact + .fact { border-left: 0; border-top: 1px solid var(--iron); padding-left: 0; padding-top: 1.4rem; }
+  .project { grid-template-columns: 2.4rem 1fr; }
+  .skills { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 460px) {
+  .skills { grid-template-columns: 1fr; }
+}
